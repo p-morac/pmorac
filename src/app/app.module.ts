@@ -4,6 +4,7 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaisModule } from './pais/pais.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [	
@@ -12,8 +13,8 @@ import { PaisModule } from './pais/pais.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PaisModule    
-  ],
+    HttpClientModule,
+    PaisModule],
 
   providers: [
     provideClientHydration(withEventReplay())
